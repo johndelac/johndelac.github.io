@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<!--
+John Delacruz
+
+CIS128 assignment1
+-->
+
+
+<html lang="en">
+    
+    
+<head>
+    <link rel="stylesheet" href="css/style.css">   
+    <title>HW1</title>
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="https://bitstorm.org/jquery/color-animation/jquery.animate-colors.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+            $("#animate").click(function() {
+                var header = $("#header");
+                    header.animate({fontSize: "40px"}, 3000);
+                    header.css('color', 'blue');
+                    header.animate({fontSize: "30px"}, 3000);
+                    $(".photo").animate({borderWidth: "10px", borderColor: 'darkolivegreen'});
+            });
+        })
+    </script>
+    <main >    
+        <div id="content-box"><h1 id="header">Simple HTML & CSS Page</h1></div>    
+        
+        <div class="container">
+            <div id="photo-box">
+                <img style="border:1px solid black" class="photo" src="img/myself.jpg.JPG" alt="john">
+            </div>
+            
+            <div class="text">
+                Hello my name is John Delacruz and I am working on getting my CS degree. I am 23 years old. Some of my interests aside from coding are playing guitar, basketball, and traveling.
+            </div>
+        </div>
+
+
+        <div class="text2">
+            I am attending this class to develop my knowledge in Mobile/Web development. I would like to soon have the skills to deploy my own projects on to the web. I do plan on hopefully finding a career as a fullstack engineer down the line.
+        </div>
+
+    
+        <h2>Technologies for this class</h2>
+  
+        <div class="bullet">
+            <ul>
+            <li>HTML</li>    
+            <li>CSS</li>
+            <li>JavaScript</li>
+            </ul>
+        </div>
+ 
+
+        <h2>Resources</h2>    
+    
+        <ul class="resourcesBullet">
+            <li><a href="https://www.youtube.com/watch?v=PkZNo7MFNFg">JavaScript Tutorial</a> - This link is a well made tutorial for beginner's attempting to learn JavaScript</li>    
+            <li><a href="https://www.skillshare.com/">Skillshare</a> - Skillshare is great for anyone trying to find open source materials to build their skills upon. </li> 
+        </ul>
+    
+        <div><button id="animate">Animate</button></div>
+    </main>   
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+h1 {
+    font-size: 2em;
+    text-align: center;
+}
+
+.container {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    display: flex;
+
+}
+
+.text {
+padding-left: 30px;
+display: inline-block;
+
+}
+
+.text2 {
+padding-bottom: 50px;
+}
+
+.bullet {
+padding-top: 50px;
+}
+
+
+.photo {
+width: 200px
+
+}
+
+
+h2 {
+text-align: center;
+
+}
+
+
+.resourcesBullet {
+    padding-bottom: 30px
+}
