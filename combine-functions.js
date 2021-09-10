@@ -20,3 +20,17 @@ $(document).on('click', "#submit", function () {
         document.getElementById("smallest").innerHTML = Math.min(first, second, third);
     }
 });
+
+
+$(document).on('click', "#reset", function () {
+  document.getElementById("first-entry").value = "";
+  document.getElementById("second-entry").value = "";
+  document.getElementById("third-entry").value = "";
+
+  document.getElementById("sum").value = "";
+  document.getElementById("product").value = "";
+  document.getElementById("average").value = "";
+  document.getElementById("largest").value = "";
+  document.getElementById("smallest").value = "";
+
+});
