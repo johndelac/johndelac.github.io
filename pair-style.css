@@ -1,0 +1,52 @@
+.bar{
+    margin: 10 auto;
+    width: 575px;
+    border-radius: 30px;
+    border: 1px solid #dcdcdc;
+}
+
+#text-entry{
+    height: 45px;
+    border: none;
+    width: 500px;
+    font-size: 16px;
+    outline: none;
+}
+
+.buttons{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.button{
+    font-size: 15px;
+    padding: 10px 20px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+.output{
+  margin-bottom: 30px;
+}
+
+header{
+  margin-top: 50px;
+}
+
+#return {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+
