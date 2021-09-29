@@ -38,7 +38,7 @@ function clicked(){
         } else if (finalAvg >= 60) {
             document.forms["results"].elements["result"].value = `With a final grade of ${Math.round(finalAvg)} student will be recieving a D. Student must retake the course.`;
         }else if (finalAvg <= 59) {
-            document.forms["results"].elements["result"].value = `With a final grade of ${Math.round(finalAvg)} student will be recieving a F. Student must retake the course.`;
+            document.forms["results"].elements["result"].value = `With a final grade of ${Math.round(finalAvg)} student will be recieving an F. Student must retake the course.`;
         }
     }
 }
