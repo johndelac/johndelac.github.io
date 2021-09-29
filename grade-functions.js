@@ -32,13 +32,13 @@ function clicked(){
         if (finalAvg >= 90){
             document.forms["results"].elements["result"].value = `With a final grade of ${Math.round(finalAvg)} student will be recieving an A`;
         } else if (finalAvg >= 80) {
-            document.forms["results"].elements["result"].value = `With a final grade of ${Math.round(finalAvg)} student will be recieving an B`;
+            document.forms["results"].elements["result"].value = `With a final grade of ${Math.round(finalAvg)} student will be recieving a B`;
         } else if (finalAvg >= 70) {
-            document.forms["results"].elements["result"].value = `With a final grade of ${Math.round(finalAvg)} student will be recieving an C`;
+            document.forms["results"].elements["result"].value = `With a final grade of ${Math.round(finalAvg)} student will be recieving a C`;
         } else if (finalAvg >= 60) {
-            document.forms["results"].elements["result"].value = `With a final grade of ${Math.round(finalAvg)} student will be recieving an D. Student must retake the course.`;
+            document.forms["results"].elements["result"].value = `With a final grade of ${Math.round(finalAvg)} student will be recieving a D. Student must retake the course.`;
         }else if (finalAvg <= 59) {
-            document.forms["results"].elements["result"].value = `With a final grade of ${Math.round(finalAvg)} student will be recieving an F. Student must retake the course.`;
+            document.forms["results"].elements["result"].value = `With a final grade of ${Math.round(finalAvg)} student will be recieving a F. Student must retake the course.`;
         }
     }
 }
