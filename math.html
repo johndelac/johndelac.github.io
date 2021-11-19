@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="John Delacruz's submission for Homework #6 Part 1">
+    <link rel="stylesheet" href="math.css">
+    <script defer src="math.js"></script>
+    <title>HW 6 Part 1</title>
+</head>
+
+<body>
+    <header>
+        <h1><u>Please enter a number with at least 4 decimal numbers.</u></h1>
+
+        <form>
+            <button id="return" formaction="https://johndelac.github.io/hw6.html">Return</button>
+        </form>
+    </header>
+    <section>
+        <div id="error"></div>
+
+        <form id="form" name="form" onsubmit="return false">
+            <div id="inputContainer">
+                <label for="name">Enter Here:</label>
+                <input type="text" id="float" name="float" required>
+                <button type="submit">Submit</button>
+                <button type="reset" onclick="location.reload();">Reset</button>
+            </div>
+
+            <div id="textareaContainer">
+                <textarea name="" id="textarea" cols="30" rows="1" disabled></textarea>
+            </div>
+        </form>
+    </section>
+</body>
+
+</html>
