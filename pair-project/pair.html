@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <link rel="stylesheet" href="pair.css">
+    <meta name="description" content="John Delacruz's submission for CIS 114 Assignment #2 Part 1/2.">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pair Project</title>
+</head>
+
+
+<body>
+    <form>
+        <button id="return" formaction="https://johndelac.github.io/hw2.html">Return</button>
+        <center>
+            <header>
+                <h1>Let's Pair It Up!</h1>
+            </header>
+
+            <div id="instructions">
+                <p>Please enter an even amount of characters (A-Z, a-z, 0-9, No spaces or special characters!)</p>
+            </div>
+
+            <div class="bar">
+                <input type="text" id="text-entry" title="entry">
+            </div>
+
+            <div class="buttons">
+                <button class="button" id="submit" type="button">Submit</button>
+                <button class="button" id="reset" type="button">Reset</button>
+            </div>
+
+            <div class="output">
+                <ul id="myUl"></ul>
+
+                <script>
+                    const splitPairs = (input) => {
+                        if (!input) return [];
+                        let pairs = [];
+                        if (input.length % 2 !== 0) { input += '_' }
+                        for (let i = 0; i < input.length; i += 2) {
+                            pairs.push(`${input[i] + input[i + 1]}`)
+                        }
+                        return pairs;
+                    }
+
+
+                    $(document).on('click', "#submit", function () {
+
+                        const arr = document.getElementById("text-entry").value;
+
+                        var format = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/? ]+/;
+
+                        if (format.test(arr)) {
+                            alert("Please do not include non numeric or alphabetic characters.")
+                            document.getElementById("text-entry").value = "";
+                            $('#myUl').empty();
+                        } else if (arr.length % 2 != 0) {
+                            alert("Please enter an even amount of characters")
+                            document.getElementById("text-entry").value = "";
+                            $('#myUl').empty();
+                        } else if (arr == "") {
+                            alert("Please enter valid characters")
+                            document.getElementById("text-entry").value = "";
+                            $('#myUl').empty();
+                        } else {
+                            const first_array = splitPairs(arr);
+                            var counter = 0;
+
+                            first_array.forEach(function (item) {
+                                var li = document.createElement("li");
+                                if (counter == 0) {
+                                    li.style.color = "red"
+                                    li.style.fontFamily = "Times New Roman"
+                                    counter++
+                                } else if (counter == 1) {
+                                    li.style.color = "blue"
+                                    li.style.fontFamily = "Arial"
+                                    counter++
+                                } else if (counter == 2) {
+                                    li.style.color = "green"
+                                    li.style.fontFamily = "Impact"
+                                    li.style.fontStyle = "italic"
+                                    counter = 0
+                                }
+
+                                var text = document.createTextNode(item);
+                                li.appendChild(text);
+                                document.getElementById("myUl").appendChild(li);
+                            });
+                        }
+
+
+                    });
+
+                    $(document).on('click', "#reset", function () {
+                        document.getElementById("text-entry").value = "";
+                        $('#myUl').empty();
+                    });
+
+                    function reset() {
+                        document.getElementById("text-entry").value = "";
+                        $('#myUl').empty();
+                    }
+                </script>
+            </div>
+        </center>
+</body>
+
+</html>
