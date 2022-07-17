@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="John Delacruz's submission for Homework #6 Part 2">
+    <link rel="stylesheet" href="charat.css">
+    <script defer src="charat.js"></script>
+    <title>HW 6 Part 2</title>
+</head>
+
+<body>
+    <header>
+        <h1>Assignment #6 Part 2</h1>
+
+        <form>
+            <button id="return" formaction="https://johndelac.github.io/hw6.html">Return</button>
+        </form>
+    </header>
+    <section>
+        <form>
+            <div id="textArea">
+                <p>Enter text here:</p>
+                <textarea cols="30" rows="1" id="input" placeholder=
+                    "Dissimulare etiam sperasti, perfide, tantum posse nefas tacitusque mea decedere terra? Nec te noster amor nec te data dextera quondam nec moritura tenet crudeli funere Dido? Quin etiam hiberno moliri sidere classem et mediis properas Aquilonibus ire per altum, crudelis? Quid, si non arva aliena domosque ignotas peteres, et Troia antiqua maneret, Troia perundosum peteretur classibus aequor?"></textarea>
+            </div>
+
+            <div id="searhContainter">
+                <label for="search">Enter character to search:</label>
+                <input type="text" name="search" id="search">
+                <input type="button" value="Submit" onclick="count();"></input>
+                <button type="reset" onclick="location.reload();">Reset</button>
+            </div>
+
+            <div id="outputContainer">
+                <label for="output">Occurrences of search character in text entry</label>
+                <textarea cols="30" rows="1" id="output" disabled></textarea>
+            </div>
+        </form>
+    </section>
+</body>
+
+</html>
+
