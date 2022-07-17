@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Dancing Script', cursive;
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    color: #fff;
+    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    background-size: 400% 400%;
+    position: relative;
+    animation: change 10s ease-in-out infinite;
+    min-height: 1500px;
+}
+
+@keyframes change {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+
+h1{
+    text-align: center;
+    font-size: 65px;
+}
+
+.box{
+    background-image:url(img/picture.jpeg);
+    padding: 200px 100px;
+    position: relative;
+    top: 100px;
+    min-height: 25px;
+    
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.menu{
+    min-height: 10px;
+}
+
+h2{
+    text-align: center;
+    padding-top: 150px;
+    padding-bottom: 20px;
+    font-size: 50px;
+}
+
+ul li{
+    font-size: 25px;
+    text-align: center;
+    padding: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.box, .menu{
+    margin-right: 10%;
+    margin-left: 10%;
+}
