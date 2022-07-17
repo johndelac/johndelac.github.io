@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+}
+
+html{
+    background: rgb(20,23,26);
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    text-align: center;
+}
+
+body{
+    width: 60em;
+    height: 100vh;
+    border: 2px solid black;
+    margin: auto;
+    background: black;
+}
+
+
+
+/*Header*/
+#return {
+    position: absolute;
+    top: .625em;
+    right: .625em;
+}
+
+
+
+/*Section*/
+form div{
+    padding-top: 4em;
+}
+
+#input{
+    width: 30em;
+    height: 15em;
+    margin-top: .5em;
+}
+
+#output{
+    background: white;
+}
