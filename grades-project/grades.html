@@ -1,0 +1,108 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="grades.css">
+    <script src="grades.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <a href="https://johndelac.github.io/main-page/index.html">
+            <img src="img/alien.jpg" alt="">
+        </a>
+    </header>
+
+    <div class="container">
+        <section class="calculator-container">
+            <h1>Weighted Grade Calculator</h1>
+
+            <table id="the-table" name="table">
+                <tr class="row-headers">
+                    <th>Assignments (Optional)</th>
+                    <th>Grade</th>
+                    <th>Weight</th>
+                </tr>
+
+                <div class="inputs">
+                    <tr class="row-inputs">
+                        <td><input type="text" id="assignments"></td>
+                        <td><input type="text" class="grade" id="grade" name="grade"></td>
+                        <td><input type="text" class="weight" id="weight"></td>
+                    </tr>
+
+                    <tr class="row-inputs">
+                        <td><input type="text" id=assignments`></td>
+                        <td><input type="text" class="grade" id="grade" name="grade"></td>
+                        <td><input type="text" class="weight" id="weight"></td>
+                    </tr>
+
+                    <tr class="row-inputs">
+                        <td><input type="text" id="assignments"></td>
+                        <td><input type="text" class="grade" id="grade3" name="grade"></td>
+                        <td><input type="text" class="weight" id="weight"></td>
+                    </tr>
+
+                    <tr class="row-inputs">
+                        <td><input type="text" id="assignments"></td>
+                        <td><input type="text" class="grade" id="grade4" name="grade"></td>
+                        <td><input type="text" class="weight" id="weight"></td>
+                    </tr>
+
+                    <tr class="row-inputs">
+                        <td><input type="text" id="assignments"></td>
+                        <td><input type="text" class="grade" id="grade5" name="grade"></td>
+                        <td><input type="text" class="weight" id="weight"></td>
+                    </tr>
+
+                    <tr class="row-inputs">
+                        <td><input type="text" id="assignments"></td>
+                        <td><input type="text" class="grade" id="grade6" name="grade"></td>
+                        <td><input type="text" class="weight" id="weight"></td>
+                    </tr>
+
+                    <tr class="row-inputs">
+                        <td><input type="text" id="assignments"></td>
+                        <td><input type="text" class="grade" id="grade7" name="grade"></td>
+                        <td><input type="text" class="weight" id="weight"></td>
+                    </tr>
+
+                    <tr class="row-inputs" id="last-input">
+                        <td><input type="text" id="assignments"></td>
+                        <td><input type="text" class="grade" id="grade8" name="grade"></td>
+                        <td><input type="text" class="weight" id="weight"></td>
+                    </tr>
+                </div>
+
+
+            </table>
+
+            <div class="buttons-container">
+                <div class="clear">
+                    <button class="buttons" id="clear" onclick="clearData()">Clear All</button>
+                </div>
+                <div class="add">
+                    <button class="buttons" id="add" onclick="addRow()">Add Row</button>
+                </div>
+                <div class="calculate">
+                    <button class="buttons" id="calculate" onclick="computeGrade()">Calculate</button>
+                </div>
+            </div>
+
+
+            <div class="result">
+                <h1 class="result-header">Results:</h1>
+                <div class="flex">
+                    <h2 id="total">Your Grade Average: </h2>
+                    <h3 id="result"></h3>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
