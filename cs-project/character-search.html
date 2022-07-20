@@ -8,16 +8,14 @@
     <meta name="description" content="John Delacruz's submission for Homework #6 Part 2">
     <link rel="stylesheet" href="character-search.css">
     <script defer src="character-search.js"></script>
-    <title>HW 6 Part 2</title>
+    <title>Word Search</title>
 </head>
 
 <body>
     <header>
-        <h1>Assignment #6 Part 2</h1>
-
-        <form>
-            <button id="return" formaction="https://johndelac.github.io/hw6.html">Return</button>
-        </form>
+        <a href="https://johndelac.github.io/main-page/index.html">
+            <img src="img/alien.png" alt="">
+        </a>
     </header>
     <section>
         <form>
@@ -28,15 +26,15 @@
             </div>
 
             <div id="searhContainter">
-                <label for="search">Enter character to search:</label>
-                <input type="text" name="search" id="search">
+                <label for="search">Enter word to search:</label>
+                <input type="text" name="search" id="search" oninput="textOnly(this)">
                 <input type="button" value="Submit" onclick="count();"></input>
                 <button type="reset" onclick="location.reload();">Reset</button>
             </div>
-
+            
             <div id="outputContainer">
-                <label for="output">Occurrences of search character in text entry</label>
-                <textarea cols="30" rows="1" id="output" disabled></textarea>
+                <label for="output">Occurrences of searched word in text entry</label>
+                <input type="text" id="output" disabled>
             </div>
         </form>
     </section>

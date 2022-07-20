@@ -1,26 +1,27 @@
 const $ = function(id) { return document.getElementById(id); };
 
+function textOnly(input){
+    var regex = /^[$&+,:;=?@#/"_|'<>.^*(){}%!-]/g;
+    input.value = input.value.replace(regex, "");
+}
+
 function count(){
     var counter = 0;
     var input = $('input');
     var searchingFor = $('search')
     var output = $('output');
+    var str = input.value;
 
-    searchingFor = searchingFor.value.toLowerCase().charAt(0);
-    localStorage.setItem('searchingFor', searchingFor);
-    input = input.value.toLowerCase();
+    str = str.replace(/[^a-zA-Z ]/g, "");
+    str = str.toLowerCase();
+    searchingFor = searchingFor.value.toLowerCase();
+    var array = str.split(" ");
 
-    for(var i = 0; i < input.length; i++){
-        if(input.charAt(i) === searchingFor){
+    for(var i = 0; i < array.length; i++){
+        if(array[i] === searchingFor){
             counter++
         }
 
     }
-
-    if(counter === 0){
-        var myWindow = window.open("error.html", "marian","width=300,height=100,top=1,left=300");
-        location.reload();
-    } else {
         output.value = `${counter} occurence(s) of ${searchingFor} found`;
-    }
 }

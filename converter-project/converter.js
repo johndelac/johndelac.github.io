@@ -10,7 +10,7 @@ function celcius(){
         document.getElementById("output").value="Please enter a valid number.";
     } else {
         var celcius = 5/9 * (fahrenheit-32);
-        document.getElementById("output").value=`With a temperature of ${fahrenheit} degrees Fahrenheit, that is ${Math.round(celcius.toFixed(0))} Celcius.`;
+        document.getElementById("output").value=`${fahrenheit} degree(s) fahrenheit is ${Math.round(celcius.toFixed(0))} degree(s) celcius.`;
 
     }
 }
@@ -22,7 +22,7 @@ function fahrenheit(){
         document.getElementById("output").value="Please enter a valid number.";
     } else {
         var fahrenheit = (9/5 * celcius) + 32;
-        document.getElementById("output").value=`With a temperature of ${celcius} degrees Celcius, that is ${Math.round(fahrenheit.toFixed(0))} Fahrenheit.`;
+        document.getElementById("output").value=`${celcius} degree(s) celcius is ${Math.round(fahrenheit.toFixed(0))} degree(s) fahrenheit.`;
 
     }
 }

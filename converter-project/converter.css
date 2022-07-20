@@ -1,3 +1,16 @@
+body{
+  background: url(img/temp.jpg) no-repeat center center fixed; ;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+img{
+  height: 100px;
+  margin-top: 1rem;
+}
+
 .bar{
   margin-left: 15px;
   margin-bottom: 30px;
@@ -22,6 +35,7 @@
   margin: 10 auto;
   width: 600px;
   border-radius: 30px;
+  background-color: white;
   border: 1px solid #dcdcdc;
   text-align: center;
 }
