@@ -1,0 +1,97 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="commission.css">
+    <script src="commission.js"></script>
+    <title>Commission Calculator</title>
+</head>
+
+<body>
+    <header>
+        <a href="https://johndelac.github.io/main-page/index.html">
+            <img src="img/alien.png" alt="">
+        </a>
+    </header>
+
+    <div class="header2">
+        <h2>Calculate With Ease!</h2>
+    </div>
+
+    <section class="layout-section">
+        <div class="calculator-section">
+            <div class="labels">
+                <div class="text-container">
+                    <article class="text-box">
+                        <h3>Sale Price</h3>
+                    </article>
+                </div>
+
+                <div class="text-container">
+                    <article class="text-box">
+                        <h3>Commission</h3>
+                    </article>
+                </div>
+
+                <div class="text-container" id="bottom">
+                    <article class="text-box">
+                        <h3>Commission Amount</h3>
+                    </article>
+                </div>
+
+            </div>
+
+            <div class="inputs">
+                <div class="input-container">
+                    <input type="text" class="input" name="input" id="price" value="" autofocus oninput="numbersOnly(this) ">
+                    <p class="symbol">$</p>
+                </div>
+                <div class="input-container">
+                    <input type="text" class="input" name="input" id="percentage" value="" oninput="numbersOnly(this)">
+                    <p class="symbol">%</p>
+                </div>
+                <div class="input-container" style="border-bottom: none;">
+                    <input type="text" class="input" name="input" id="commission" value="" disabled>
+                    <p class="symbol">$</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <p class="text">Just take sale price, multiply it by the <a
+                    href="https://www.omnicalculator.com/finance/commission">commission</a> percentage, divide it by
+                100. An example calculation: a blue widget is sold for $70 . The sales person works on a commission -
+                he/she gets 14% out of every transaction, which amounts to $9.80.</p>
+        </div>
+    </section>
+
+    <script>
+        const price = document.getElementById("price");
+        const percentage = document.getElementById('percentage');
+        const commission = document.getElementById('commission');
+
+        function numbersOnly(input){
+            var regex = /[^0-9.]/g;
+            input.value = input.value.replace(regex, "");
+        }
+
+        price.addEventListener("input", () => {
+            if (isNaN(parseFloat(price.value)) || isNaN(parseFloat(percentage.value))) {
+                commission.value = "";
+            } else {
+                commission.value = (parseFloat(price.value) * (parseFloat(percentage.value) / 100)).toFixed(2);
+            }
+        })
+
+        percentage.addEventListener("input", () => {
+            if (isNaN(parseFloat(price.value)) || isNaN(parseFloat(percentage.value))) {
+                commission.value = ""
+            } else {
+                commission.value = (parseFloat(price.value) * (parseFloat(percentage.value) / 100)).toFixed(2);
+            }
+        })
+    </script>
+</body>
+
+</html>
