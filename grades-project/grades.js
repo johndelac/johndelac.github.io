@@ -75,7 +75,7 @@ function computeGrade() {
     if (isNaN(final) || final < 1) {
         document.getElementById('result').innerHTML = "Please check your inputs.";
     } else {
-        document.getElementById('result').innerHTML = `${final}%`;
+        document.getElementById('result').innerHTML = `${final.toFixed(2)}%`;
     }
 
 }
