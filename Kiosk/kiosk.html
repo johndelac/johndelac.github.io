@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>SCK4 Kiosk</title>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img class="logo" src="./images/logo.png" alt="Amazon River" onclick="fly()">
+        </div>
+
+        <div id="myMarquee">
+            
+        </div>
+    </header>
+
+    <main id="main">
+        <div class="container">
+<!-----------------------------------------------------------------TILES ----------------------------------------------------------------->
+            <div class="tiles tile-logo dead" onclick="quickTicket();">
+                <img src="./images/quick-ticket.png" alt="" class="device-logo dead" onclick="quickTicket();">
+            </div>
+
+            <div class="tiles dead" onclick="zukey()">
+                <img src="./images/zukey.png" alt="" class="device-logo dead" onclick="zukey()">
+                <h3 class="dead">Zukey</h3>
+            </div>
+
+            <div class="tiles dead" onclick="laptop()">
+                <img src="./images/laptop.png" alt="" class="device-logo dead" onclick="laptop()">
+                <h3 class="dead" style="margin-top: 20px;" onclick="laptop();">Laptops</h3>
+            </div>
+
+            <div class="tiles dead" onclick="printer()">
+                <img src="./images/zd620.png" alt="" class="device-logo dead" onclick="printer()">
+                <h3 class="dead">Printers</h3>
+            </div>
+
+            <div class="tiles dead" onclick="scanner()">
+                <img src="./images/scanner.png" alt="" class="device-logo dead" onclick="scanner()">
+                <h3 class="dead">Scanners</h3>
+            </div>
+
+            <div class="tiles dead" onclick="mobileCart()">
+                <img src="./images/mobile.png" alt="" class="device-logo dead" onclick="mobileCart()">
+                <h3 class="dead">Mobile Carts</h3>
+            </div>
+
+        </div>
+
+<!----------------------------------------------------------------- POPUPS ----------------------------------------------------------------->
+        <div class="popups dead" id="popups">
+                <!--------------------------------------------- Tickets ---------------------------------------------->
+            <div class="ticket-popups dead" >
+                <div class="ticket-popup popup dead">
+                    <h2 class="step-number dead">Step 1:</h2>
+                    <div class="step-text dead">Select what type of issue you have. (Most equipment such as laptops, desktops, printers, peripherals, etc. will fall under "Client Devices")</div>
+                    <img class="dead" src="./ticket-steps/ticket-step-one.png" alt="">
+                </div>
+    
+                <div class="ticket-popup popup dead">
+                    <h2 class="step-number dead">Step 2:</h2>
+                    <div class="step-text">Select Device</div>
+                    <img class="dead" src="./ticket-steps/ticket-step-two.png" alt="">
+                </div>
+
+                <div class="ticket-popup popup dead">
+                    <h2 class="step-number dead">Step 3:</h2>
+                    <div class="step-text dead">Enter a description of the problem and be as specific as possible about the issue and the location of the problem</div>
+                    <img class="dead" src="./ticket-steps/ticket-step-three.png" alt="">
+                </div>
+
+                <div class="ticket-popup popup dead">
+                    <h2 class="step-number dead">Step 4:</h2>
+                    <div class="step-text dead">Check the details of the ticket (If you're cutting this ticket for another associate enter their username under "On behalf of") then click submit</div>
+                    <img class="dead" src="./ticket-steps/ticket-step-four.png" alt="">
+                </div>
+
+                <div class="skip-button-container dead">
+                    <button class="skip-button dead control" id="ticket-skip">Create Ticket</button>
+                </div>
+            </div>
+            
+             <!--------------------------------------------- Zukey ---------------------------------------------->
+            <div class="zukey-popups dead" >
+                <div class="zukey-popup popup dead">
+                    <h2 class="step-number dead">Step 1:</h2>
+                    <div class="step-text dead">Select 3 Day Solution</div>
+                    <img class="dead" src="./zukey-steps/zukey-step-one.png" alt="">
+                </div>
+    
+                <div class="zukey-popup popup dead">
+                    <h2 class="step-number dead">Step 2:</h2>
+                    <div class="step-text">Enter the username of the person that needs the zukey and their availability</div>
+                    <img class="dead" src="./zukey-steps/zukey-step-two.png" alt="">
+                </div>
+
+                <div class="zukey-popup popup dead">
+                    <h2 class="step-number dead">Step 3:</h2>
+                    <div class="step-text dead">Click Submit Ticket</div>
+                    <img class="dead" src="./zukey-steps/zukey-step-three.png" alt="">
+                </div>
+
+                <div class="skip-button-container dead">
+                    <button class="skip-button dead control" id="zukey-skip">Create Ticket</button>
+                </div>
+            </div>
+
+             <!--------------------------------------------- Laptops ---------------------------------------------->
+             <div class="laptop-popups dead" >
+                <div class="laptop-popup popup dead">
+                    <h2 class="step-number dead">Step 1:</h2>
+                    <div class="step-text dead">Enter if this issue affects an individual or a group.</div>
+                    <img class="dead" src="./laptop-steps/laptop-step-one.png" alt="">
+                </div>
+    
+                <div class="laptop-popup popup dead">
+                    <h2 class="step-number dead">Step 2:</h2>
+                    <div class="step-text">Select Create a Ticket.</div>
+                    <img class="dead" src="./laptop-steps/laptop-step-two.png" alt="">
+                </div>
+
+                <div class="laptop-popup popup dead">
+                    <h2 class="step-number dead">Step 3:</h2>
+                    <div class="step-text dead">Enter the location and a description of the issue you're experiencing. Please be as specific as possible</div>
+                    <img class="dead" src="./laptop-steps/laptop-step-three.png" alt="">
+                </div>
+
+                <div class="laptop-popup popup dead">
+                    <h2 class="step-number dead">Step 4:</h2>
+                    <div class="step-text dead">Check the details of the ticket (If you're cutting this ticket for another associate, enter their username under "On behalf of) then click next</div>
+                    <img class="dead" src="./laptop-steps/laptop-step-four.png" alt="">
+                </div>
+
+                <div class="skip-button-container dead">
+                    <button class="skip-button dead control" id="laptop-skip">Create Ticket</button>
+                </div>
+            </div>
+
+            <!--------------------------------------------- Printers ---------------------------------------------->
+            <div class="printer-popups dead" >
+                <div class="printer-popup popup dead">
+                    <h2 class="step-number dead">Step 1:</h2>
+                    <div class="step-text dead">Select the type of printer (Label printers will fall under Zebra)</div>
+                    <img class="dead" src="./printer-steps/printer-step-one.png" alt="">
+                </div>
+    
+                <div class="printer-popup popup dead">
+                    <h2 class="step-number dead">Step 2:</h2>
+                    <div class="step-text">Select a model (Most model numbers will be at the front of the device)</div>
+                    <img class="dead" src="./printer-steps/printer-step-two.png" alt="">
+                </div>
+
+                <div class="printer-popup popup dead">
+                    <h2 class="step-number dead">Step 3:</h2>
+                    <div class="step-text dead">Select ("No, I don't have time for self-service")</div>
+                    <img class="dead" src="./printer-steps/printer-step-three.png" alt="">
+                </div>
+
+                <div class="printer-popup popup dead">
+                    <h2 class="step-number dead">Step 4:</h2>
+                    <div class="step-text dead">Select the type of issue that you are having</div>
+                    <img class="dead" src="./printer-steps/printer-step-four.png" alt="">
+                </div>
+
+                <div class="printer-popup popup dead">
+                    <h2 class="step-number dead">Step 5:</h2>
+                    <div class="step-text dead">Select how many printers are affected, enter the location of the printer, and enter a brief description of the issue then click next</div>
+                    <img class="dead" src="./printer-steps/printer-step-five.png" alt="">
+                </div>
+
+                <div class="printer-popup popup dead">
+                    <h2 class="step-number dead">Step 6:</h2>
+                    <div class="step-text dead">Check the details of the ticket (If you're cutting this ticket for another associate, enter their username under "On behalf of) then click submit</div>
+                    <img class="dead" src="./printer-steps/printer-step-six.png" alt="">
+                </div>
+
+                <div class="skip-button-container dead">
+                    <button class="skip-button dead control" id="printer-skip">Create Ticket</button>
+                </div>
+            </div>
+
+            <!--------------------------------------------- Scanners ---------------------------------------------->
+            <div class="scanner-popups dead" >
+                <div class="scanner-popup popup dead">
+                    <h2 class="step-number dead">Step 1:</h2>
+                    <div class="step-text dead">Enter the scanner's model, the location, and write a brief description of the issue</div>
+                    <img class="dead" src="./scanner-steps/scanner-step-one.png" alt="">
+                </div>
+    
+                <div class="scanner-popup popup dead">
+                    <h2 class="step-number dead">Step 2:</h2>
+                    <div class="step-text">Enter the username of the person that needs the zukey</div>
+                    <img class="dead" src="./scanner-steps/scanner-step-two.png" alt="">
+                </div>
+
+                <div class="skip-button-container dead">
+                    <button class="skip-button dead control" id="scanner-skip">Create Ticket</button>
+                </div>
+            </div>
+
+                <!--------------------------------------------- Mobile Carts ---------------------------------------------->
+            <div class="mobile-popups dead" >
+                <div class="mobile-popup popup dead">
+                    <h2 class="step-number dead">Step 1:</h2>
+                    <div class="step-text dead">Enter what device on the mobile is affected, the mobile cart number, and a description of the issue</div>
+                    <img class="dead" src="./mobile-steps/mobile-step-one.png" alt="">
+                </div>
+    
+                <div class="mobile-popup popup dead">
+                    <h2 class="step-number dead">Step 2:</h2>
+                    <div class="step-text">Double check the details of the ticket (If you're cutting this ticket for another associate, enter their username under "On behalf of") then click next</div>
+                    <img class="dead" src="./mobile-steps/mobile-step-two.png" alt="">
+                </div>
+
+                <div class="skip-button-container dead">
+                    <button class="skip-button dead control" id="mobile-skip">Created Ticket</button>
+                </div>
+            </div>
+            
+            <a class="prev dead control" id="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next dead control" id="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </main>
+
+    <footer>
+        <h3 style="color: #383838;">Created by: <span style="color: #00A8E1;">@delajohe</span></h3>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="controller.js"></script>
+</body>
+</html>
+
